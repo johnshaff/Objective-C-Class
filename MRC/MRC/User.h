@@ -28,6 +28,4 @@
 -(NSNumber *)age;
 -(NSString *)description;
 
-
-
 @end

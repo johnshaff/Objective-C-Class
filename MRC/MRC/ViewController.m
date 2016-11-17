@@ -18,11 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    User *user1 = [[User alloc]initWithName:@"Bob Costas" initWithAge:@59 initWithEmail:@"bobcostas@abc.com"];
-    User *user2 = [[User alloc]initWithName:@"Jerry Smith" initWithAge:@45 initWithEmail:@"jerrysmith@gmail.com"];
-    User *user3 = [[User alloc]initWithName:@"Dirk McGirk" initWithAge:@32 initWithEmail:@"dirkmcgirk@yahoo.com"];
-    User *user4 = [[User alloc]initWithName:@"Newman" initWithAge:@32 initWithEmail:@"newman@nbc.com"];
-    User *user5 = [[User alloc]initWithName:@"Jerry Seinfeld" initWithAge:@64 initWithEmail:@"jerry@gmail.com"];
+    User *user1 = [[User alloc] initWithName:@"Bob Costas" initWithAge:@59 initWithEmail:@"bobcostas@abc.com"];
+    User *user2 = [[User alloc] initWithName:@"Jerry Smith" initWithAge:@45 initWithEmail:@"jerrysmith@gmail.com"];
+    User *user3 = [[User alloc] initWithName:@"Dirk McGirk" initWithAge:@32 initWithEmail:@"dirkmcgirk@yahoo.com"];
+    User *user4 = [[User alloc] initWithName:@"Newman" initWithAge:@32 initWithEmail:@"newman@nbc.com"];
+    User *user5 = [[User alloc] initWithName:@"Jerry Seinfeld" initWithAge:@64 initWithEmail:@"jerry@gmail.com"];
 
     
 

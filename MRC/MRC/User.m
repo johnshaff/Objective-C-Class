@@ -11,11 +11,6 @@
 @implementation User
 
 
-
-
-
-
-
 -(void)setName:(NSString *)name{
     if(_name != name) {
         [name retain];
@@ -80,6 +75,7 @@
     [super dealloc];
 }
 
+
 -(instancetype)initWithName:(NSString*)name initWithAge:(NSNumber*)age initWithEmail:(NSString*)email
 {
     //If self is a subclass then Objective C will automatically know the super is the of the above "instancetype"
@@ -91,8 +87,6 @@
     }
     return self;
 }
-
-
 
 @end
 
