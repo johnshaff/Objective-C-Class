@@ -13,15 +13,7 @@
 
 @interface ViewController ()  <UITableViewDataSource, UITableViewDelegate>
 
-
-
 @property (weak, nonatomic) IBOutlet UITableView *timelineTableView;
-
-@property (weak, nonatomic) IBOutlet UITableViewCell *tableViewCell;
-
-
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-
 
 
 @end
@@ -40,9 +32,6 @@
 
     NSArray *allStudents = [[StudentStore shared] allStudents];
     
-
-
-    
     NSLog(@"%@", allStudents);
     
     //CREATE A NEW STUDENT TO SAVE
@@ -53,6 +42,13 @@
 
     //RUN POPULATE CELLS FUNCTION
 }
+
+- (IBAction)addStudentButton:(id)sender {
+    
+    [self performSegueWithIdentifier:@"addStudent" sender:self];
+
+}
+
 
 
 
@@ -67,14 +63,18 @@
     return allStudents.count;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-//    let currentTweet = self.allTweets[indexPath.row]
-//    cell?.tweet = currentTweet
-//    
-//    return cell!
+    NSArray *allStudents = [[StudentStore shared] allStudents];
+
+
+    Student *currentStudent = allStudents[indexPath.row];
+    cell.textLabel.text = currentStudent.firstName;
+
+    return cell;
 }
 
 @end
